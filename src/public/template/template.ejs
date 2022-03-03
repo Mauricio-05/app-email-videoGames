@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      .contenedor {
+        display: flex;
+        font-family: "Roboto";
+        padding-inline-start: 0px !important;
+        margin-block-start: 1.5rem !important;
+        margin-block-end: 1rem !important;
+      }
+      .items {
+        width: auto;
+        padding: 15px;
+        margin-top: 5px;
+      }
+      .items img {
+        border-radius: 20px;
+        width: 420px;
+        height: 350px;
+      }
+      .items h1 {
+        font-size: 40px;
+        text-align: center;
+        margin-block-start: 1.5rem !important;
+        margin-block-end: 1rem !important;
+      }
+      .items p {
+        font-size: 17px;
+        text-align: left;
+      }
+      .items a {
+        font-size: 17px;
+        text-align: left;
+        color: rgb(21, 21, 212);
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="contenedor">
+      <div class="items">
+        <h1><%= videoGame.title%></h1>
+        <p><%= videoGame.short_description %></p>
+        <p><strong>•Platform:</strong> <%= videoGame.platform %>.</p>
+        <p><strong>•Developer:</strong> <%= videoGame.developer %>.</p>
+        <p><strong>•Release date:</strong> <%= videoGame.release_date %>.</p>
+        <p>
+          Link from:
+          <a href="<%= videoGame.freetogame_profile_url %>">
+            <%= videoGame.title %></a
+          >
+        </p>
+      </div>
+      <div class="items">
+        <img src="<%= videoGame.thumbnail %>" alt="videoGame" />
+      </div>
+    </div>
+  </body>
+</html>
